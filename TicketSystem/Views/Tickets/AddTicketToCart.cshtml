@@ -1,0 +1,29 @@
+﻿@model TicketSystem.Models.DTO.AddToCartDto
+@{
+    ViewData["Title"] = "AddTicketToCart";
+}
+
+<h1>AddTicketToCart</h1>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-4">
+            <form asp-action="AddTicketToCart" method="post">
+                <input type="hidden" asp-for="TicketId" />
+                <div class="form-group">
+                    <label asp-for="SelectedTicket.Name"></label>
+                    <input disabled asp-for="SelectedTicket.Name" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Quantity"></label>
+                    <input asp-for="Quantity" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

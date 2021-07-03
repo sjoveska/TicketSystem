@@ -1,0 +1,14 @@
+﻿@model TicketSystem.Models.Identity.TicketSystemApplicationUser
+@{
+    ViewData["Title"] = "ChangeUserRole";
+}
+
+<h1>Change User Role</h1>
+
+<form asp-action="ChangeUserRole" method="post">
+    @Html.HiddenFor(m => m.Id)
+    <select asp-for="Role" asp-items="Html.GetEnumSelectList<TicketSystem.Models.Identity.Role>()">
+        <option value="">Choose a role</option>
+    </select>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>

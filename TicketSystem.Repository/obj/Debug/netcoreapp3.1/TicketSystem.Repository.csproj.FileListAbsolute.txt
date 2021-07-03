@@ -1,0 +1,12 @@
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\bin\Debug\netcoreapp3.1\TicketSystem.Domain.dll
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.csprojAssemblyReference.cache
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.AssemblyInfo.cs
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\bin\Debug\netcoreapp3.1\TicketSystem.Repository.deps.json
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\bin\Debug\netcoreapp3.1\TicketSystem.Repository.dll
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\bin\Debug\netcoreapp3.1\TicketSystem.Domain.pdb
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.csproj.CopyComplete
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\bin\Debug\netcoreapp3.1\TicketSystem.Repository.pdb
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.dll
+C:\Users\user\source\repos\TicketSystem\TicketSystem.Repository\obj\Debug\netcoreapp3.1\TicketSystem.Repository.pdb
