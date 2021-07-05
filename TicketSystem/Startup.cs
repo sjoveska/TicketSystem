@@ -30,15 +30,40 @@ namespace TicketSystem
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<TicketSystemApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+
+            //services.AddScoped<EmailSettings>(es => emailService);
+            /*services.AddScoped<IEmailService, EmailService>(email => new EmailService(emailService));
+            services.AddScoped<IBackgroundEmailSender, BackgroundEmailSender>();
+            services.AddHostedService<ConsumeScopedHostedService>();*/
+
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+
+
+            services.AddTransient<ITicketService, TicketService>();
+            services.AddTransient<ICartService, CartService>();
+            services.AddTransient<IOrderService, Services.Implementation.OrderService>();
+
+            services.AddControllersWithViews()
+               .AddNewtonsoftJson(options =>
+               options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+           );
+
+            
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [Obsolete]
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
